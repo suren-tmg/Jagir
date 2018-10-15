@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="My Profile"
+        android:id="@+id/nav_item_inbox"
+        android:icon="@drawable/man_user"/>
+
+    <item android:title="My CV"
+        android:id="@+id/nav_item_sent"
+        android:icon="@drawable/cv"/>
+
+    <item android:title="Aplied Jobs"
+        android:id="@+id/nav_item_draft"
+        android:icon="@drawable/applied_jobs"/>
+
+    <group android:id="@+id/group_settings_id">
+
+        <item android:title="Settings"
+            android:icon="@drawable/setting"/>
+        <item android:title="About"
+            android:icon="@drawable/info"/>
+    </group>
+
+    <item android:title="Share">
+        <menu>
+            <item
+                android:title="Share"
+                android:icon="@drawable/share"/>
+            <item
+                android:title="Rate Us"
+                android:icon="@drawable/rating"/>
+        </menu>
+    </item>
+
+
+
+
+
+</menu>
