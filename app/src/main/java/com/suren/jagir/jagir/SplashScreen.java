@@ -38,7 +38,7 @@ public class SplashScreen extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(2000);
+
                         URL url = new URL("http://www.google.com");
                         HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
                         urlc.setRequestProperty("User-Agent", "Android");

@@ -1,8 +1,5 @@
 package com.suren.jagir.jagir;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -13,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 
 public class MyLocation {
-    Timer timer1;
     LocationManager lm;
     LocationResult locationResult;
     boolean gps_enabled = false;
@@ -50,7 +46,6 @@ public class MyLocation {
 
     LocationListener locationListenerGps = new LocationListener() {
         public void onLocationChanged(Location location) {
-            timer1.cancel();
             locationResult.gotLocation(location);
             lm.removeUpdates(this);
             lm.removeUpdates(locationListenerNetwork);
@@ -62,7 +57,6 @@ public class MyLocation {
 
     LocationListener locationListenerNetwork = new LocationListener() {
         public void onLocationChanged(Location location) {
-            timer1.cancel();
             locationResult.gotLocation(location);
             lm.removeUpdates(this);
             lm.removeUpdates(locationListenerGps);
